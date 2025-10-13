@@ -22,25 +22,43 @@ E:
 
 function length(string) {
   // YOUR CODE BELOW HERE //
-
+//code
+  //return output - length of input string
+return string.length;
   // YOUR CODE ABOVE HERE //
 }
-
+//console.log(length(string)); //number datatype
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+/*
+I: Function takes input String
+O: Function returns new string - with all letters lowercase
+C:
+E:
+*/
 function toLowerCase(string) {
   // YOUR CODE BELOW HERE //
-
+//code
+  //return output - string input to all lowercase letters
+return string.toLowerCase();
   // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
  */
+/*
+I: Function takes input string
+O: Function returns string with forced uppercase
+C:
+E:
+*/
 function toUpperCase(string) {
   // YOUR CODE BELOW HERE //
-
+//code
+  //return output - string with forced uppercase
+return string.toUpperCase();
   // YOUR CODE ABOVE HERE //
 }
 
@@ -57,9 +75,15 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+/*
+I: Function takes input string
+O: Function returns string with forced dash-case and forced lowercase
+C:
+E:
+*/
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
-
+return string.replace(" ", "-").toLowerCase();
   // YOUR CODE ABOVE HERE //
 }
 
@@ -75,6 +99,12 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: Function takes input two strings
+O: Function returns true/ false
+C:case sensitive
+E:
+*/
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
 
@@ -93,6 +123,12 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: Function takes input two strings
+O: Function returns true/ false
+C:case sensitive 
+E:
+*/
 function endsWith(string, char) {
   // YOUR CODE BELOW HERE //
 
@@ -104,6 +140,12 @@ function endsWith(string, char) {
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+/*
+I: Function takes input two strings
+O: Function returns one concatenated string
+C:
+E:
+*/
 function concat(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
 
@@ -120,6 +162,12 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
+/*
+I: Function takes input more than one string
+O: Function returns all strings joined togther
+C:
+E:
+*/
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
   var args = Array.from(arguments);
@@ -136,6 +184,12 @@ function join(stringOne, stringTwo) {
  *
  * TIP: What property of the String do we need to compare?
  */
+/*
+I: Function takes input two strings
+O: Function returns one string - the longer string
+C:
+E:
+*/
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
 
@@ -149,6 +203,12 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/*
+I: Function takes input two strings 
+O: Function returns numbers -1, 1, 0
+C:
+E:
+*/
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
 
@@ -162,9 +222,20 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/*
+I: Function takes input two strings
+O: Function returns numbers (return 1; if first letter lower than second)(return -1; if second letter lower than first) (return 0; if equal)
+C:
+E:
+*/
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  
+  //compare strings - if-else statement
+    //if stringOne first character < stringTwo first character
+    //true - return 1
+    //if stringOne first character > stringTwo first character
+    //true - return -1
+    //else 0
   // YOUR CODE ABOVE HERE //
 }
 
