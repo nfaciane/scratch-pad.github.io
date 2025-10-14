@@ -83,7 +83,8 @@ E:
 */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
-return string.replace(" ", "-").toLowerCase();
+  //return output - split string by words, join with dash, force lowercase
+return string.split(" ").join("-").toLowerCase();
   // YOUR CODE ABOVE HERE //
 }
 
