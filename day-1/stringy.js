@@ -108,7 +108,14 @@ E:
 */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
-
+//if-else statement
+  //condition - if first char in string equals char in forced lowercase
+  if(string.split("").shift(0) == char.toLowerCase()){
+    //code output - return true
+    return true;
+  } else {
+    return false;
+  }
   // YOUR CODE ABOVE HERE //
 }
 
