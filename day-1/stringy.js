@@ -108,9 +108,13 @@ E:
 */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
+  //initialize variable a to equal first char in string
+  var a = string.split("").shift(0);
+  //initialize variable b to equal char in forced lowercase
+  var b = char.toLowerCase();
 //if-else statement
-  //condition - if first char in string equals char in forced lowercase
-  if(string.split("").shift(0) == char.toLowerCase()){
+  //condition - if a equals b
+  if(a == b){
     //code output - return true
     return true;
   } else {
@@ -134,7 +138,7 @@ function beginsWith(string, char) {
 /*
 I: Function takes input two strings
 O: Function returns true/ false
-C:case sensitive 
+C: case sensitive 
 E:
 */
 function endsWith(string, char) {
@@ -156,7 +160,8 @@ E:
 */
 function concat(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+  //return string1 and string2 concatenated with space between strings
+return stringOne + "" + stringTwo;
   // YOUR CODE ABOVE HERE //
 }
 
@@ -178,8 +183,12 @@ E:
 */
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  var args = Array.from(arguments);
-
+  //declare output array
+  var array = [];
+  //convert strings to arrays; push to storage array
+ array.push(stringOne.split("").join(""), stringTwo.split("").join(""));
+ //output- return all strings joined togther; no space
+return array.join("");
   // YOUR CODE ABOVE HERE //
 }
 
@@ -200,7 +209,14 @@ E:
 */
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+  var a = stringOne.length;
+  var b = stringTwo.length;
+if (a > b){
+  return stringOne;
+}
+if (a < b){
+  return stringTwo;
+}
   // YOUR CODE ABOVE HERE //
 }
 
