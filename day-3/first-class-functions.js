@@ -11,9 +11,17 @@
  * return a Function that tests whether a given value is greater than the
  * base.
  */
+/*
+I: Function takes input 
+O: Function return a function; syntax: return function(){}
+C:
+E:
+*/
 function createGreaterThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  return function(){
+
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -70,6 +78,12 @@ function createEndsWithFilter(endsWith) {
  *    modifyString(['a', 'b'], function(str){ return str + "!" });
  *    // returns => ['a!', 'b!']
  */
+/*
+I: Function takes input array of strings
+O: Function return output array
+C:
+E:
+*/
 function modifyStrings(strings, modify) {
   // YOUR CODE BELOW HERE //
 
@@ -95,7 +109,13 @@ function modifyStrings(strings, modify) {
  *    // returns => false
  */
 
-
+/*
+I: Function takes input array of strings
+O: Function return function argument
+C:
+E:
+*/
+//higher order function
 function allStringsPass(strings, test) {
   // YOUR CODE BELOW HERE //
 
