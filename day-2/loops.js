@@ -177,6 +177,10 @@ function printObjectValuesInReverse(object) {
     objValues = Object.values(object);
   }
   //for loop because looping over values in reverse
+  for (var i = objValues.length - 1; i >= 0; i--){
+    //code: output- print object values to console
+    console.log(objValues[i]);
+  }
     //start- last  stop- increment-
   // YOUR CODE ABOVE HERE //
 }
