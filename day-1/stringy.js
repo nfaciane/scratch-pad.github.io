@@ -194,12 +194,9 @@ E:
 */
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  //declare output array
-  var array = [];
-  //convert strings to arrays; push to storage array
- array.push(stringOne.split("").join(""), stringTwo.split("").join(""));
- //output- return all strings joined togther; no space
-return array.join("");
+  var args = Array.from(arguments);
+  //join elements in array args
+return args.join("");
   // YOUR CODE ABOVE HERE //
 }
 
