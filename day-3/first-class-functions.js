@@ -12,16 +12,17 @@
  * base.
  */
 /*
-I: Function takes input 
-O: Function return a function; syntax: return function(){}
+I: Function takes input base- string or number
+O: Function return a function with parameter- value; syntax: return function(){}; 
+that tests if value(return function parameter) is greater than base
 C:
 E:
 */
 function createGreaterThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  return function(){
-
-  }
+  return function(value){
+    return value > base;
+    }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -31,9 +32,17 @@ function createGreaterThanFilter(base) {
  * base. (test means return true or false)
  *
  */
+/*
+I: Function takes input base- string or number
+O: Function return function with parameter- value; syntax: return function(){}; 
+C: 
+E:
+*/
 function createLessThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  return function(value){
+    return value < base;
+    }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -44,9 +53,25 @@ function createLessThanFilter(base) {
  *
  * This function needs to be case insensitive.
  */
+/*
+I: Function takes input startsWith- single character string
+O: Function return function argument
+C: case insensitive (must use ==; must have both strings in same case)
+E:
+*/
 function createStartsWithFilter(startsWith) {
   // YOUR CODE BELOW HERE //
-
+  //return function
+    //return function parameter- string
+  return function(string){
+  //declare variables to hold tests for parameters to later compare
+    //define startsWith parameter- a single character (case insensitive)
+    var a = startsWith.toLowerCase();
+    //define string parameter- first character of string (case insensitive)
+    var b = string.split("").shift(0).toLowerCase();
+    //return output- compare variables to equal one another (case insensitive)
+    return a == b;
+    }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -57,12 +82,26 @@ function createStartsWithFilter(startsWith) {
  *
  * This function needs to be case insensitive.
  */
+/*
+I: Function takes input endsWith- single character string 
+O: Function return function with parameter string
+C:
+E:
+*/
 function createEndsWithFilter(endsWith) {
   // YOUR CODE BELOW HERE //
-
+//return function (no name) with parameter string
+return function(string){
+//declare variables to compare later
+  //initialize endsWith- single character string (case insensitive)
+  var a = endsWith.toLowerCase();
+  //initialize string- last character of string (case insensitive)
+  var b = string.split("").slice(-1)[0].toLowerCase();
+  //return output- compare variables to equal one another (case insensitive)
+  return a == b
+}
   // YOUR CODE ABOVE HERE //
 }
-
 /**
  * Given an Array of Strings and a Function designed to modify a String,
  * return the Array of the Strings, modified.
@@ -79,16 +118,28 @@ function createEndsWithFilter(endsWith) {
  *    // returns => ['a!', 'b!']
  */
 /*
-I: Function takes input array of strings
-O: Function return output array
-C:
+I: Function takes input array of strings and a function(to modify string)
+O: Function return output array of strings modified
+C: loop over strings, pass string to modify function, collect results in output array
 E:
 */
 function modifyStrings(strings, modify) {
   // YOUR CODE BELOW HERE //
+ //create output array- where modified string is stored
+ var outputArray = [];
+ //loop over strings array
+ for (var i = 0; i < strings.length; i++){
+   //modify strings array
+   if (modify(strings[i]) === true){
+     outputArray.push(strings[i]);
+   }
+ }
+ //return output array
+ return outputArray;
+}
 
   // YOUR CODE ABOVE HERE //
-}
+
 
 
 /**
@@ -110,15 +161,25 @@ function modifyStrings(strings, modify) {
  */
 
 /*
-I: Function takes input array of strings
-O: Function return function argument
+I: Function takes input array- of strings and a function- to test strings
+O: Function return true- if all strings pass test
 C:
 E:
 */
 //higher order function
 function allStringsPass(strings, test) {
   // YOUR CODE BELOW HERE //
-
+  //create output array
+  var outputArray = [];
+  //iterate over input array
+  for (var i = 0; i < strings.length; i++){
+    //determine if current number is even
+    if (test(strings[i]) === true){
+      outputArray.push(strings[i]);
+    }
+  }
+  //return output array
+  return outputArray;
   // YOUR CODE ABOVE HERE //
 }
 
