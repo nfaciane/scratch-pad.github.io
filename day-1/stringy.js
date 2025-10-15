@@ -103,13 +103,13 @@ return string.split(" ").join("-").toLowerCase();
 /*
 I: Function takes input two strings
 O: Function returns true/ false
-C:case sensitive
+C:case insensitive (must use ==; must have both strings in same case)
 E:
 */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
   //initialize variable a to equal first char in string
-  var a = string.split("").shift(0);
+  var a = string.split("").shift(0).toLowerCase();
   //initialize variable b to equal char in forced lowercase
   var b = char.toLowerCase();
 //if-else statement
@@ -138,12 +138,23 @@ function beginsWith(string, char) {
 /*
 I: Function takes input two strings
 O: Function returns true/ false
-C: case sensitive 
+C: case sensitive (must use ===; must convert both strings to same case)
 E:
 */
 function endsWith(string, char) {
   // YOUR CODE BELOW HERE //
-
+  //initialize variable a to equal last char in string
+  var a = string.split("").slice(-1)[0].toUpperCase();
+  //initialize variable b to equal char in forced upper case
+  var b = char.toUpperCase();
+//if-else statement
+  //condition - if a equals b
+  if(a === b){
+    //code output - return true
+    return true;
+  } else {
+    return false;
+  }
   // YOUR CODE ABOVE HERE //
 }
 
