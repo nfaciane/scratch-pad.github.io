@@ -273,6 +273,7 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+// TIP:remember if the alphabet was an array a through z; 'a' would be at index 0
 /*
 I: Function takes input two strings
 O: Function returns numbers (return 1; if first letter lower than second)(return -1; if second letter lower than first) (return 0; if equal)
@@ -281,12 +282,24 @@ E:
 */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+  //define parameters to compare
+  var a = stringOne;
+  var b = stringTwo;
   //compare strings - if-else statement
-    //if stringOne first character < stringTwo first character
-    //true - return 1
-    //if stringOne first character > stringTwo first character
-    //true - return -1
-    //else 0
+//if stringOne first character < stringTwo first character
+    if(a > b){
+      //code: return 1
+        return 1;
+//else if stringOne first character > stringTwo first character
+    } else if(a < b){
+      //code: return -1
+        return -1;
+//else if stringOne equals stringTwo; return 0
+    } else if(a === b){
+      //code: return 0
+        return 0;
+    }
+    
   // YOUR CODE ABOVE HERE //
 }
 
