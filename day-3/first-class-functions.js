@@ -117,23 +117,17 @@ return function(string){
  *    modifyString(['a', 'b'], function(str){ return str + "!" });
  *    // returns => ['a!', 'b!']
  */
-/*
-I: Function takes input array of strings and a function(to modify string)
-O: Function return output array of strings modified
-C: loop over strings, pass string to modify function, collect results in output array
-E:
-*/
+
 function modifyStrings(strings, modify) {
   // YOUR CODE BELOW HERE //
  //create output array- where modified string is stored
  var outputArray = [];
  //loop over strings array
  for (var i = 0; i < strings.length; i++){
+  //modify strings array then push array values to output array
+  outputArray.push(modify(strings[i]));
    //modify strings array
-   if (modify(strings[i]) === true){
-     outputArray.push(strings[i]);
    }
- }
  //return output array
  return outputArray;
 }
@@ -178,8 +172,8 @@ function allStringsPass(strings, test) {
       outputArray.push(strings[i]);
     }
   }
-  //return output array
-  return outputArray;
+  //return true
+  return true;
   // YOUR CODE ABOVE HERE //
 }
 

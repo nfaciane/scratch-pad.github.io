@@ -21,9 +21,21 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+/*
+I: Function takes input two numbers 
+O: Function return array- all integers between the two parameters
+C: output array; loop; push method; if statement
+E:
+*/
 function range(start, end) {
   // YOUR CODE BELOW HERE //
+//create output array
+var array = [];
+//while loop
+for (var i = ){
 
+}
+//if statement
   // YOUR CODE ABOVE HERE //
 }
 
