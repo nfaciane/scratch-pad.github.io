@@ -33,8 +33,15 @@
  *          new-line character added after it!
  */
 
+//array called contacts that needs to be used
+
 function makeContact(id, nameFirst, nameLast) {
   // Solve this function first
+  var contact = {
+    id: 1, 
+    nameFirst:  
+    nameLast
+  }
 }
 
 function makeContactList() {
@@ -42,11 +49,14 @@ function makeContactList() {
    * You need something here to hold contacts. See length api for a hint:
    */
   var contacts = [];
-
+//use length method
   return {
     // we implemented the length api for you //
     length: function(){
       return contacts.length;
+    },
+    addContact: function(contact){
+contacts.push(contact);
     },
   }
 }
