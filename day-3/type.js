@@ -14,9 +14,23 @@
  *
  * HINT: There is a method that can help with this.
  */
+/*
+I: Function takes in an input value
+O: Function returns true; if value is an array/ else return false
+C: use Array.isArray();
+E:
+*/
 function isArray(value) {
   // YOUR CODE BELOW HERE //
-
+//if statement
+  //condition: if value is an array => return true
+  if(Array.isArray(value)){
+    //code: return true
+    return true
+  } else{
+    //code: return false
+    return false;
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -34,9 +48,32 @@ function isArray(value) {
  * isObject([1, 2, 3]); // false
  * 
  */
+/*
+I: Function takes in an input value
+O: Function returns true if value is collection object => else return false
+C: 
+E:
+*/
 function isObject(value) {
   // YOUR CODE BELOW HERE //
-  
+  //if statement
+    //if value is collection object => return true
+    if(Array.isArray(value)){
+      return false;
+    }
+    
+    if(value === null){
+      return false;
+    }
+    
+    if(value instanceof Date){
+      return false;
+    }
+
+    if(typeof value === 'object'){
+      return true;
+    }
+    
   // YOUR CODE ABOVE HERE //
 }
 
@@ -46,6 +83,12 @@ function isObject(value) {
  *
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+/*
+I: Function takes in an input value
+O: Function returns true if array or object; else return false
+C: 
+E:
+*/
 function isCollection(value) {
   // YOUR CODE BELOW HERE //
 
@@ -71,6 +114,12 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */
+/*
+I: Function takes in an input 
+O: Function returns 
+C: 
+E:
+*/
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
   
