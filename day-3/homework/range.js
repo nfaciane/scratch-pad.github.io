@@ -31,11 +31,24 @@ function range(start, end) {
   // YOUR CODE BELOW HERE //
 //create output array
 var array = [];
-//while loop
-for (var i = ){
+var arr = [];
+var ajj = [];
+//for loop using parameters
+for (var i = start; i <= end; i++ ){
+ var a = arr.push(i);
 
+  //if statement
+  if(start > end){
+for (var j = end; j >= start; j--){
+  var b = ajj.push(j);
+  array = ajj;
 }
-//if statement
+  } else {
+array = arr;
+  }
+}
+//return output array
+return array;
   // YOUR CODE ABOVE HERE //
 }
 
