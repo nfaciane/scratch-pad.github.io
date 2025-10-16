@@ -163,17 +163,15 @@ E:
 //higher order function
 function allStringsPass(strings, test) {
   // YOUR CODE BELOW HERE //
-  //create output array
-  var outputArray = [];
-  //iterate over input array
+  //iterate over array
   for (var i = 0; i < strings.length; i++){
-    //determine if current number is even
-    if (test(strings[i]) === true){
-      outputArray.push(strings[i]);
-    }
-  }
-  //return true
+    //determine if all strings in array pass test
+if (strings.every(test)){
   return true;
+} else {
+  return false;
+}
+  }
   // YOUR CODE ABOVE HERE //
 }
 
