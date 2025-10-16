@@ -31,26 +31,22 @@ function range(start, end) {
   // YOUR CODE BELOW HERE //
 //create output array
 var array = [];
-var arr = [];
-var ajj = [];
-//for loop using parameters
-for (var i = start; i <= end; i++ ){
- var a = arr.push(i);
-
-  //if statement
-  if(start > end){
-for (var j = end; j >= start; j--){
-  var b = ajj.push(j);
-  array = ajj;
-}
-  } else {
-array = arr;
+//if statement 
+if(start < end){
+  //for loop to define array created with two integers
+  for(var i = start; i <= end; i++){
+    array.push(i);
   }
+  //for loop to define array in reverse if start is greater than end
+  } else if(start > end){
+    for(var i = start; i >= end; i-- ){
+      array.push(i);
+    }
+  }
+  //output: return output array
+  return array;
 }
-//return output array
-return array;
-  // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

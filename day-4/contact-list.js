@@ -34,16 +34,24 @@
  */
 
 //array called contacts that needs to be used
+/*
+I: Function takes input a number and two strings
+O: Function return an object
+C: 
+E:
+*/
 
 function makeContact(id, nameFirst, nameLast) {
   // Solve this function first
-  var contact = {
-    id: 1, 
-    nameFirst:  
-    nameLast
-  }
-}
+  return {id, nameFirst, nameLast};
 
+}
+/*
+I: Function takes input objects
+O: Function return an object
+C: 
+E:
+*/
 function makeContactList() {
   /*
    * You need something here to hold contacts. See length api for a hint:
@@ -58,6 +66,10 @@ function makeContactList() {
     addContact: function(contact){
 contacts.push(contact);
     },
+    //fullName function- input string of full name (if in contact list = true)=> output return contact object; else return undefined
+    findContact: function(fullName){
+
+    }
   }
 }
 
