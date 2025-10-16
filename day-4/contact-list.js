@@ -68,6 +68,11 @@ contacts.push(contact);
     },
     //fullName function- input string of full name (if in contact list = true)=> output return contact object; else return undefined
     findContact: function(fullName){
+      //define variables to compare; fullName (input) and array of nameFirst, nameLast (output)
+        //convert fullName string into array; use split method
+        //define nameFirst, nameLast; in contacts array, in object; 
+          //access array contacts
+          //access object for key nameFirst : value
 
     }
   }
