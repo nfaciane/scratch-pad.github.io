@@ -238,11 +238,30 @@ if (a < b){
 /*
 I: Function takes input two strings 
 O: Function returns numbers -1, 1, 0
-C:
+C: use if statement, use sort method
 E:
 */
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+  //define a and b
+  var a = stringOne;
+  var b = stringTwo;
+  //if statement
+//condition: if first string is greater than second string => return 1
+    if(a < b){
+      //code: return 1
+      return 1;
+//condition: else if second string is greater than first string => return -1
+    } else if(a > b){
+      //code: return -1
+      return -1;
+//condition: else if first string equals second string => return 0
+    } else if (a === b){
+      //code: return 0
+      return 0;
+
+    }
+    
 
   // YOUR CODE ABOVE HERE //
 }
