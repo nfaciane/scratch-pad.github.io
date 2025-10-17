@@ -58,20 +58,10 @@ function isObject(value) {
   // YOUR CODE BELOW HERE //
   //if statement
     //if value is collection object => return true
-    if(Array.isArray(value)){
-      return false;
-    }
-    
-    if(value === null){
-      return false;
-    }
-    
-    if(value instanceof Date){
-      return false;
-    }
-
-    if(typeof value === 'object'){
+    if(!(Array.isArray(value) || value === null || value instanceof Date || typeof(value) !== 'object')){
       return true;
+    } else {
+      return false;
     }
     
   // YOUR CODE ABOVE HERE //

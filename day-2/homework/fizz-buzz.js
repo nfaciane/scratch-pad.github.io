@@ -11,14 +11,20 @@
  *  d. FINALLY, for numbers which are multiples of both three and five print “FizzBuzz”.
  */
 /*
-I: Function takes input array of numbers 1 - 100
-O: Function return print 'Fizz' for multiples of three; 
+I: Function takes input
+O: Function return print array of numbers 1 - 100; print 'Fizz' for multiples of three; 
     print 'Buzz' for multiples of five; print 'FizzBuzz' for multiples of three and five
 C:
 E:
 */
 function fizzBuzz() {
  // YOUR CODE BELOW HERE //
+ //create output array
+ var array = [];
+ //define array from 1 to 100
+ for( var i = 1; i <= 100; i++){
+array.push(i);
+ }
 
  // YOUR CODE ABOVE HERE //
 }
