@@ -75,13 +75,21 @@ function isObject(value) {
  */
 /*
 I: Function takes in an input value
-O: Function returns true if array or object; else return false
+O: Function returns true if array or collection object; else return false
 C: 
 E:
 */
 function isCollection(value) {
   // YOUR CODE BELOW HERE //
-
+//if statement
+  //condition if value is an array or collection object return true
+  if(!(Array.isArray(value) || value === null || value instanceof Date || typeof(value) !== 'object')){
+    return true;
+  } else if(Array.isArray(value)){
+    return true;
+  } else{
+    return false;
+  }
   // YOUR CODE ABOVE HERE //
 }
 
