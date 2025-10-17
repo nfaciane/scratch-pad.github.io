@@ -21,11 +21,24 @@ function fizzBuzz() {
  // YOUR CODE BELOW HERE //
  //create output array
  var array = [];
+ var replaceFizz = 'Fizz';
+ var replaceBuzz = 'Buzz';
+ var replaceFizzBuzz = 'FizzBuzz';
  //define array from 1 to 100
- for( var i = 1; i <= 100; i++){
-array.push(i);
+ for(var i = 1; i <= 100; i++){
+  array.push(i);
+//replace multiples of three with 'Fizz'
+if(array[i] % 3 === 0 && array[i] % 5 === 0){
+  array[i] = replaceFizzBuzz;
+} else if(array[i] % 3 === 0){
+  array[i] = replaceFizz;
+} else if(array[i] % 5 === 0){
+  array[i] = replaceBuzz;
+}
+//console.log(array);
  }
-
+ 
+//console.log(array);
  // YOUR CODE ABOVE HERE //
 }
 
