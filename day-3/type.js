@@ -97,15 +97,15 @@ function isCollection(value) {
  * Given an input value, return the type of the value as a String
  *
  * Types are one of:
- *    - "string"
- *    - "array"
- *    - "object"
- *    - "undefined"
- *    - "number"
- *    - "boolean"
- *    - "null"
- *    - "function"
- *    - "date"
+ *    - "string" -
+ *    - "array" -
+ *    - "object" -
+ *    - "undefined" -
+ *    - "number" -
+ *    - "boolean" -
+ *    - "null" -
+ *    - "function" -
+ *    - "date" -
  *
  * Examples:
  *    typeOf(134) -> "number"
@@ -114,13 +114,32 @@ function isCollection(value) {
  */
 /*
 I: Function takes in an input 
-O: Function returns 
+O: Function returns string of value type
 C: 
 E:
 */
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
-  
+  //if statement 
+    //if value type is number, string, boolean
+    if(typeof(value) === 'number' || typeof(value) === 'string' || typeof(value) === 'boolean' || typeof(value) === 'function'){
+      //return string
+      return typeof(value);
+      //if value is null
+    } else if(value === null){
+      return 'null';
+      //if value is array
+    } else if(Array.isArray(value)){
+      return 'array';
+      //if value is date
+    } else if(value instanceof Date){
+      return 'date';
+    } else if(typeof(value) === 'undefined'){
+      //return undefined
+      return 'undefined';
+    } else if(typeof(value) === 'object' && !Array.isArray(value) && value !== null)
+    {return 'object';
+    }
   // YOUR CODE ABOVE HERE //
 }
 

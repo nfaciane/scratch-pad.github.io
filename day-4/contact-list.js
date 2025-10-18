@@ -68,11 +68,37 @@ contacts.push(contact);
     },
     //fullName function- input string of full name (if in contact list = true)=> output return contact object; else return undefined
     findContact: function(fullName){
-      //define variables to compare; fullName (input) and array of nameFirst, nameLast (output)
-        //convert fullName string into array; use split method
-        //define nameFirst, nameLast; in contacts array, in object; 
-          //access array contacts
-          //access object for key nameFirst : value
+      //create output container result
+      var result;
+      //if statement
+        //convert string fullName to array; where index 0 equals firstName and index 1 equals lastName
+        var fullNameArray = fullName.split(" ");
+        //create for-loop to loop over array, contacts, to find first and last name match
+        for(var i = 0; i < contacts.length; i++){
+        //if fullNameArray[0] equals contacts[i]['nameFirst] and fullNameArray[1] equals contacts[i]['nameLast']
+        if(fullNameArray[0] === contacts[i].nameFirst && fullNameArray[1] === contacts[i].nameLast){
+         //return matching object in contacts array 
+          result = contacts[i];
+        } else {
+          //else return undefined
+          result = undefined;
+        }
+       
+      }
+       //return output container
+       return result;
+    }, 
+    //function removeContact: input object, contact, output removes object from array, contacts
+    removeContact: function(contact){
+      //itierate through contacts array with for loop
+      for(var i = 0; i < contacts.length; i++){
+        //if statement
+        //condition if input object key equals contacts array object key
+        if(contact[key] === contacts[i]['id']){
+          //delete array object
+          contacts.splice(i, 1);
+        }
+      }
 
     }
   }
