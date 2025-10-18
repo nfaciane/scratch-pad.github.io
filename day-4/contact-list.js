@@ -64,13 +64,12 @@ function makeContactList() {
       return contacts.length;
     },
     addContact: function(contact){
-contacts.push(contact);
+      contacts.push(contact);
     },
     //fullName function- input string of full name (if in contact list = true)=> output return contact object; else return undefined
     findContact: function(fullName){
       //create output container result
-      var result;
-      //if statement
+      var match;
         //convert string fullName to array; where index 0 equals firstName and index 1 equals lastName
         var fullNameArray = fullName.split(" ");
         //create for-loop to loop over array, contacts, to find first and last name match
@@ -78,29 +77,33 @@ contacts.push(contact);
         //if fullNameArray[0] equals contacts[i]['nameFirst] and fullNameArray[1] equals contacts[i]['nameLast']
         if(fullNameArray[0] === contacts[i].nameFirst && fullNameArray[1] === contacts[i].nameLast){
          //return matching object in contacts array 
-          result = contacts[i];
+          match = contacts[i];
         } else {
           //else return undefined
-          result = undefined;
+          match = undefined;
         }
-       
+
       }
        //return output container
-       return result;
+       return match;
     }, 
-    //function removeContact: input object, contact, output removes object from array, contacts
-    removeContact: function(contact){
-      //itierate through contacts array with for loop
-      for(var i = 0; i < contacts.length; i++){
-        //if statement
-        //condition if input object key equals contacts array object key
-        if(contact[key] === contacts[i]['id']){
-          //delete array object
-          contacts.splice(i, 1);
-        }
-      }
+      removeContact: function(contact){
+        console.log(contact);
+        var a = Object.values(contact);
+        var b;
 
-    }
+        for(var j = 0; j < contacts.length; j++){
+            b = Object.values(contacts[j]);
+
+          if(a.toString() === b.toString()){
+            contacts.splice(j, 1);
+          }
+        }
+        }
+        
+  
+ 
+    
   }
 }
 
