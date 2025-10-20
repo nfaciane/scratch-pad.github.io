@@ -78,9 +78,6 @@ function makeContactList() {
         if(fullNameArray[0] === contacts[i].nameFirst && fullNameArray[1] === contacts[i].nameLast){
          //return matching object in contacts array 
           match = contacts[i];
-        } else {
-          //else return undefined
-          match = undefined;
         }
 
       }
@@ -99,7 +96,22 @@ function makeContactList() {
             contacts.splice(j, 1);
           }
         }
-        }
+        },
+        /*
+I: Function takes input array of objects
+O: Function return a string with full name and a space between first and last name
+C: 
+E:
+*/
+        printAllContactName: function(){
+          //loop thru contacts array
+          for(var i = 0; i < contacts.length; i++){
+            //return each objects nameFirst and nameLast value
+           return contacts[i].nameFirst + " " + contacts[i].nameLast    
+           
+          }
+          
+        },
         
   
  
