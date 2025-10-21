@@ -98,16 +98,22 @@ function makeContactList() {
         }
         },
         /*
-        I: Function takes input array of objects
+        I: Function takes input object from contact array
         O: Function return a string with full name and a space between first and last name
         C: 
         E:
         */
+       
         printAllContactNames: function(){
+          var names = [];
+          //loop over contacts array
+          for (var n = 0; n < contacts.length; n++){
+            //full name string nameFirst + " " + nameLast
+            names.push(contacts[n].nameFirst + " " + contacts[n].nameLast);
+          }
           //return string of full name joined with line-break(\n)
-          var fullName = [];
-          fullName.push(contacts.nameFirst + " " + contacts.nameLast);
-          return fullName.join("\n");
+          return names.join("\n");
+          
         }
        
           
